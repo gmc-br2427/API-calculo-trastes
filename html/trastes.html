@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Trastes - Oficina de Violões</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="wrapper-pagina">
+        <section class="calculadora-section">
+            
+            <div class="cabecalho-calculo">
+                <h2>Cálculo de Trastes</h2>
+                <p class="subtitulo">Informe a escala (mm). Ex.: 650</p>
+            </div>
+            
+            <div class="grupo-form">
+                <div class="input-wrapper">
+                    <label for="input-escala">Escala (em milímetros)</label>
+                    <input type="number" id="input-escala" value="650" placeholder="Ex: 650" min="1">
+                </div>
+                <button id="btn-calculo" class="btn-solid">CALCULAR</button>
+            </div>
+
+            <div id="area-resultados" style="display: none;">
+                <p class="resumo-formula">
+                    Escala: <span id="label-escala">650.00</span> mm — Fórmula: d_n = L * (1 - 1/2^(n/12))
+                </p>
+                
+                <table class="tabela-trastes">
+                    <thead>
+                        <tr>
+                            <th>TRASTE N°</th>
+                            <th>ESPAÇAMENTO DO TRASTE (MM)</th>
+                            <th>DISTÂNCIA AO RASTILHO (MM)</th>
+                            <th>DISTÂNCIA À PESTANA (MM)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpo-tabela">
+                        </tbody>
+                </table>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="../js/frontend.js"></script>
+</body>
+</html>
